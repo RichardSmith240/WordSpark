@@ -1,4 +1,4 @@
-#WordSpark
+# WordSpark
 
 ## About
 WordSpark is a Program to Promote Information Retention and Speed by flashing each work of an imported text in sequence at a set rate.
