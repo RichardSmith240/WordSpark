@@ -21,6 +21,9 @@ Features I **WANT** to implement:
 
 ---
 
-## Installation
-*this is not ready to install*
+## Installation/Use
+*This is not ready to install.*
+
 `//instalation instructions once ready`
+
+*Use of WordSpark is for educational Purposes. Instructions will be here when ready. *
