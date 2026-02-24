@@ -9,7 +9,7 @@ I am using this project to learn c/c++ so features will not be done constantly (
 Core Features:
 - [ ] Fully Format the README
 - [ ] Text Separator
-- [ ] Text Speed Dial
+- [ ] Text Speed Dial/Slider
 - [ ] Full Display for Text
 - [ ] Basic Media Controls
 
