@@ -1,5 +1,7 @@
 #include <gtk/gtk.h>
 
+GtkApplication *app = NULL;
+
 static void print_hello_world(GtkWidget *widget, gpointer data) {
 	g_print("Hello World");
 }
@@ -53,14 +55,25 @@ static void activate (GtkApplication *app, gpointer user_data) {
 	gtk_window_present (GTK_WINDOW (window));
 }
 
+int cleanup(void) {
+	if (app != NULL) {
+		g_object_unref(app);
+		app = NULL;
+		printf("CLEANUP\n");
+	}
+}
+
 int main (int argc, char **argv) {
-	GtkApplication *app;
 	int status;
 
 	app = gtk_application_new ("org.gtk.example", G_APPLICATION_DEFAULT_FLAGS);
 	g_signal_connect (app, "activate", G_CALLBACK (activate), NULL);
+	atexit(cleanup);
 	status = g_application_run (G_APPLICATION (app), argc, argv);
-	g_object_unref (app);
+	if (app != NULL) {
+		g_object_unref (app);
+		app = NULL;
+	}
 
 	return status;
 }
